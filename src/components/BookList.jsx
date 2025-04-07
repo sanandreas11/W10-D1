@@ -9,7 +9,7 @@ class BookList extends Component {
     asin: "",
   }
 
-  handleAsin(newAsin) {
+  handleAsin = (newAsin) => {
     this.setState({ asin: newAsin })
   }
 
@@ -43,7 +43,7 @@ class BookList extends Component {
                       <SingleBook
                         book={b}
                         cambiaAsin={this.handleAsin}
-                        valorediAsin={this.state.asin}
+                        valoreDiAsin={this.state.asin}
                       />
                     </Col>
                   </>
@@ -51,7 +51,7 @@ class BookList extends Component {
             </Row>
           </Col>
           <Col>
-            <CommentArea valoreDiAsin={this.state.asin} />
+            <CommentArea asin={this.state.asin} />
           </Col>
         </Row>
       </>
