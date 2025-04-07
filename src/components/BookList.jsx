@@ -40,14 +40,18 @@ class BookList extends Component {
                 .map((b) => (
                   <>
                     <Col xs={6} key={b.asin}>
-                      <SingleBook book={b} handleAsin={b.asin} />
+                      <SingleBook
+                        book={b}
+                        cambiaAsin={this.handleAsin}
+                        valorediAsin={this.state.asin}
+                      />
                     </Col>
                   </>
                 ))}
             </Row>
           </Col>
           <Col>
-            <CommentArea />
+            <CommentArea valoreDiAsin={this.state.asin} />
           </Col>
         </Row>
       </>
