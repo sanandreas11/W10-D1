@@ -2,10 +2,6 @@ import { Component } from "react"
 import { Card } from "react-bootstrap"
 
 class SingleBook extends Component {
-  state = {
-    selected: false,
-  }
-
   checkSelected = (asin) => (asin === this.props.valorediAsin ? "asin" : "")
 
   render() {
@@ -14,9 +10,6 @@ class SingleBook extends Component {
         <Card
           onClick={() => {
             this.props.cambiaAsin(this.props.book.asin)
-            this.setState({
-              selected: !this.state.selected,
-            })
           }}
           style={{
             border:
