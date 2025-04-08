@@ -1,12 +1,12 @@
 import { Card } from "react-bootstrap"
 
 const SingleBook = function (props) {
-  checkSelected = (asin) => (asin === props.valorediAsin ? "asin" : "")
+  const checkSelected = (asin) => (asin === props.valorediAsin ? "asin" : "")
 
   return (
     <>
       <Card
-        onClick={(props) => {
+        onClick={() => {
           props.cambiaAsin(props.book.asin)
         }}
         style={{
