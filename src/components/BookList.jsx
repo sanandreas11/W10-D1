@@ -33,21 +33,18 @@ const BookList = function (props) {
             {props.books
               .filter((b) => b.title.toLowerCase().includes(searchQuery))
               .map((b) => (
-                <>
-                  <Col xs={6} key={b.asin}>
-                    <SingleBook
-                      book={b}
-                      key={b.asin}
-                      cambiaAsin={handleAsin}
-                      valoreDiAsin={asin}
-                    />
-                  </Col>
-                </>
+                <Col xs={6} key={b.asin} data-testid="books">
+                  <SingleBook
+                    book={b}
+                    cambiaAsin={handleAsin}
+                    valoreDiAsin={asin}
+                  />
+                </Col>
               ))}
           </Row>
         </Col>
         <Col>
-          <CommentArea asin={asin} />
+          <CommentArea asin={asin} data-testid="comments" />
         </Col>
       </Row>
     </>

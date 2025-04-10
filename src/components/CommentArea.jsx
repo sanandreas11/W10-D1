@@ -44,7 +44,7 @@ class CommentArea extends Component {
 
   render() {
     return (
-      <div className="text-center">
+      <div className="text-center" data-testid="comment-area">
         {this.state.isLoading && <Loading />}
         {this.state.isError && <Error />}
         <AddComment asin={this.props.asin} />

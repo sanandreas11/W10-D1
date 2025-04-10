@@ -1,8 +1,6 @@
 import { Card } from "react-bootstrap"
 
 const SingleBook = function (props) {
-  const checkSelected = (asin) => (asin === props.valorediAsin ? "asin" : "")
-
   return (
     <>
       <Card
@@ -13,6 +11,7 @@ const SingleBook = function (props) {
           border:
             props.book.asin === props.valoreDiAsin ? "3px solid red" : "none",
         }}
+        data-testid="card"
       >
         <Card.Img variant="top" src={props.book.img} />
         <Card.Body>
