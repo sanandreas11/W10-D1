@@ -33,7 +33,7 @@ const BookList = function (props) {
             {props.books
               .filter((b) => b.title.toLowerCase().includes(searchQuery))
               .map((b) => (
-                <Col xs={6} key={b.asin} data-testid="books">
+                <Col xs={6} key={b.asin}>
                   <SingleBook
                     book={b}
                     cambiaAsin={handleAsin}

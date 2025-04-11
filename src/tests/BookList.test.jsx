@@ -15,7 +15,7 @@ describe("Booklist testing", () => {
     render(<BookList books={fantasy} />)
     const filterInput = screen.getByPlaceholderText("Cerca un libro")
     fireEvent.change(filterInput, { target: { value: "witcher" } })
-    expect(filterInput.length).toHaveLength(3)
+    expect(filterInput).toHaveLength(3)
   })
   it("clicking a book sets its border to red", () => {
     render(<BookList books={fantasy} />)
